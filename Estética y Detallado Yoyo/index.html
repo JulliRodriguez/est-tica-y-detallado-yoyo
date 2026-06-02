@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estética y Detallado Yoyo</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+:root{
+--white:#ffffff;
+--dark:#0f172a;
+--blue:#2563eb;
+--blue-light:#dbeafe;
+--blue-soft:#eff6ff;
+--gray:#64748b;
+--line:#cbd5e1;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:white;
+color:var(--dark);
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(15,23,42,.75);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo-text{
+color:white;
+font-size:22px;
+font-weight:700;
+}
+
+nav{
+display:flex;
+gap:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+.hero{
+height:100vh;
+background:url("hero.jpg") center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.45);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+color:white;
+padding:20px;
+}
+
+.hero-logo{
+width:220px;
+max-width:80%;
+margin-bottom:20px;
+border-radius: 50px;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.hero-btn{
+display:inline-block;
+background:var(--blue);
+color:white;
+padding:16px 28px;
+border-radius:14px;
+text-decoration:none;
+font-weight:700;
+}
+
+.section{
+padding:80px 8%;
+}
+
+.section-title{
+font-size:34px;
+text-align:center;
+margin-bottom:12px;
+}
+
+.section-sub{
+text-align:center;
+color:var(--gray);
+margin-bottom:40px;
+}
+
+.soft-bg{
+background:var(--blue-soft);
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
+}
+
+.feature{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.feature i{
+font-size:30px;
+color:var(--blue);
+margin-bottom:15px;
+}
+
+.feature h3{
+margin-bottom:10px;
+}
+
+.feature p{
+color:var(--gray);
+line-height:1.6;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:var(--dark);
+color:white;
+padding:25px;
+border-radius:18px;
+}
+
+.card i{
+font-size:24px;
+margin-bottom:12px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.price{
+font-size:24px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.card li{
+list-style:none;
+line-height:1.8;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:18px;
+}
+
+.gallery img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:18px;
+}
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.info-box{
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.contact{
+background:var(--dark);
+color:white;
+padding:70px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.contact-number{
+font-size:28px;
+font-weight:700;
+margin:15px 0;
+}
+
+.contact-btn{
+display:inline-block;
+background:white;
+color:var(--dark);
+padding:16px 24px;
+border-radius:14px;
+text-decoration:none;
+font-weight:700;
+}
+
+footer{
+text-align:center;
+padding:20px;
+}
+
+.whatsapp-float{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
+z-index:1000;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+nav{
+display:none;
+}
+
+.logo-text{
+font-size:18px;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo-text">Estética y Detallado Yoyo</div>
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="#galeria">Galería</a>
+<a href="#contacto">Contacto</a>
+</nav>
+</header>
+
+<section class="hero" id="inicio">
+<div class="hero-content">
+<img src="logo-yoyo.png" class="hero-logo" alt="Logo">
+<h1>Estética y Detallado Yoyo</h1>
+<p>Profesionalismo hasta donde estés.</p>
+<a href="https://wa.me/50662104110" class="hero-btn">Agendar por WhatsApp</a>
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">¿Por qué elegirnos?</h2>
+<p class="section-sub">Más que un lavado, una experiencia de cuidado para tu vehículo.</p>
+
+<div class="features">
+<div class="feature">
+<i class="fa-solid fa-car-side"></i>
+<h3>Servicio a domicilio</h3>
+<p>Vamos hasta donde estés.</p>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-award"></i>
+<h3>Calidad profesional</h3>
+<p>Productos y acabados premium.</p>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-shield-halved"></i>
+<h3>Confianza y seguridad</h3>
+<p>Cuidamos tu vehículo como si fuera nuestro.</p>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-clock"></i>
+<h3>Ahorra tiempo</h3>
+<p>Nosotros hacemos el trabajo por ti.</p>
+</div>
+</div>
+</section>
+
+<section class="section soft-bg" id="servicios">
+<h2 class="section-title">Nuestros servicios</h2>
+<p class="section-sub">Profesionalismo hasta donde estés.</p>
+
+<div class="cards">
+
+<div class="card">
+<i class="fa-solid fa-car"></i>
+<h3>Lavado básico</h3>
+<div class="price">₡7.000</div>
+<ul>
+<li>✔ Espuma neutra</li>
+<li>✔ PH balanceada</li>
+<li>✔ Llantas</li>
+<li>✔ Vidrios</li>
+<li>✔ Aspirado interior</li>
+</ul>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-award"></i>
+<h3>Lavado VIP</h3>
+<div class="price">₡12.000</div>
+<ul>
+<li>✔ Lavado básico</li>
+<li>✔ Restaurador</li>
+<li>✔ Neutralización</li>
+</ul>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-crown"></i>
+<h3>Lavado Platinum</h3>
+<div class="price">₡18.000</div>
+<ul>
+<li>✔ Limpieza profunda</li>
+<li>✔ Alfombras</li>
+<li>✔ Techos</li>
+</ul>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+<h3>Servicios adicionales</h3>
+<ul>
+<li>✔ Tratamiento cerámico</li>
+<li>✔ Pulido parabrisas</li>
+<li>✔ Pulido carrocería</li>
+<li>✔ Precio según vehículo</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="galeria">
+<h2 class="section-title">Galería</h2>
+<p class="section-sub">Algunos de nuestros trabajos.</p>
+
+<div class="gallery">
+<img src="foto1.jpg" alt="Trabajo 1">
+<img src="foto2.jpg" alt="Trabajo 2">
+<img src="foto3.jpg" alt="Trabajo 3">
+<img src="foto4.jpg" alt="Trabajo 4">
+</div>
+</section>
+
+<section class="section soft-bg">
+<div class="info-grid">
+
+<div class="info-box">
+<h3>Horario</h3>
+<p>Lunes a sábado<br>8:00 a.m. – 7:00 p.m.</p>
+</div>
+
+<div class="info-box">
+<h3>Cobertura</h3>
+<p>Servicio a domicilio en todo Costa Rica. Fuera de San José, Heredia, Cartago y Alajuela puede aplicar costo adicional.</p>
+</div>
+
+</div>
+</section>
+
+<section class="contact" id="contacto">
+<div>
+<h2>Contáctanos</h2>
+<div class="contact-number">6210-4110</div>
+<p>Escríbenos por WhatsApp y agenda tu servicio hoy mismo.</p>
+</div>
+
+<div>
+<a class="contact-btn" href="https://wa.me/50662104110" target="_blank">Agendar ahora</a>
+</div>
+</section>
+
+<footer>
+Estética y Detallado Yoyo © 2026
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/50662104110" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
